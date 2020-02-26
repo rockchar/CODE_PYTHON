@@ -120,7 +120,48 @@ def blackjack(num1,num2,num3):
 
 
 # Exercie 4: SUMMER OF '69: Return the sum of the numbers in the array, except ignore sections of numbers 
-# starting with a 6 and extending to the next 9 (every 6 will be followed by at least one 9). Return 0 for no numbers.
+# starting with a 6 and extending to the next 9 (every 6 will be followed by at least one 9). Return 0 for 
+# no numbers.
+
+def summerof69(inputarray):
+    add = True
+    sum = 0
+    for n in inputarray:
+        if n == 6:
+            add = False
+        if add:
+            sum+=n
+        if n == 9 and not add:
+            add = True
+    return sum
+
+# another way using while loops 
+
+def summer_69(arr):
+    total = 0
+    add = True
+    for num in arr:
+        while add:
+            if num != 6:
+                total += num
+                break
+            else:
+                add = False
+        while not add:
+            if num != 9:
+                break
+            else:
+                add = True
+                break
+    return total
+
+    
+# ------------------------------------- Driver Code Below -----------------------------------------------
+
+print("Summerof69:")
+print(summerof69([4, 5, 6, 7, 8, 9]))
+print(summerof69([1, 3, 5]))
+print(summerof69([2, 1, 6, 9, 11]))
 
 print("Blackjack:")
 print(blackjack(5,6,7))
