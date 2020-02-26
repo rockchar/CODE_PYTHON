@@ -155,7 +155,24 @@ def summer_69(arr):
                 break
     return total
 
-    
+# Exercise 5 : SPY GAME: Write a function that takes in a list of integers and returns True 
+# if it contains 007 in order 
+# spy_game([1,2,4,0,0,7,5]) --> True
+# spy_game([1,0,2,4,0,5,7]) --> True
+# spy_game([1,7,2,0,4,5,0]) --> False
+def spy_game(integerlist):
+    spy_list = [0,0,7,'x']
+    for n in integerlist:
+        if spy_list[0] == n:
+            print("popped {}".format(spy_list.pop(0)))
+            if spy_list[0]=='x':
+                return True
+    return False
+
+print("Spy Game:")
+print(spy_game([1,2,4,0,0,7,5]))
+print(spy_game([1,0,2,4,0,5,7]))
+print(spy_game([1,7,2,0,4,5,0]))
 # ------------------------------------- Driver Code Below -----------------------------------------------
 
 print("Summerof69:")
