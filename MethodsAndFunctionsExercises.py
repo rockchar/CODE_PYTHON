@@ -1,4 +1,4 @@
-# Section 1 : EASY -------------------------------------------------------------------------------------------------------
+# Section 1 : LEVEL 0 -------------------------------------------------------------------------------------------------------
 
 # Exercise 1 : LESSER OF TWO EVENS: Write a function that returns the lesser of two given numbers if both numbers are even, 
 # but returns the greater if one or both numbers are odd
@@ -46,19 +46,103 @@ def MakesTwenty(num1,num2):
         return False
 
 
-# Section 2: LEVEL 1 --------------------------------------------------------------------------- 
+# Section 2: LEVEL 1 -------------------------------------------------------------------------------- 
+
+# Exercise 1: OLD MACDONALD: Write a function that capitalizes the first and fourth letters of a name
+# Hint: grab the letters from index 0 to 2 and then from 3 to end and capitalize it!
+
+def OLD_MCDONALD(name):
+    if len(name) > 3:
+        return name[:3].capitalize()+name[3:].capitalize()
+    else:
+        return "Name too short. Try again"
+
+# Exercise 2: MASTER YODA: Given a sentence, return a sentence with the words reversed
+
+def master_yoda(sentence):
+    '''
+    wordlist = sentence.split()
+    print(wordlist)
+    wordlist = wordlist[::-1]
+    return " ".join(wordlist)
+    '''
+    return ' '.join(sentence.split()[::-1])
+
+# Exercise 3: ALMOST THERE: Given an integer n, return True if n is within 10 of either 100 or 200
+# HINT: Use Absolute Value
+
+def almost_there(num):
+    return abs(100 - num) <= 10 or abs(200 - num) <= 10 
 
 
 
+# SECTION 3 : LEVEL 2 ----------------------------------------------------------------------------------
+
+# Exercise 1: FIND 33:Given a list of ints, return True if the array contains a 3 next to a 3 somewhere.
+
+def Find_33(ints):
+    for n in range(0,len(ints)-1):
+        # print("n is {} num 1 is {} and num 2 is {}".format(n,ints[n],ints[n+1]))
+        # if ints[n] == 3 and ints[n+1] == 3:
+            #return True
+        # using slicing
+        if ints[n:n+2] == [3,3]:
+            return True
+    return False
 
 
+# Exercise 2: PAPER DOLL: Given a string, return a string where for every character in the original 
+# there are three characters
+# TODO: Try the same using map
+
+def paper_doll(word):
+    word3 = ''
+    for n in word:
+        word3 +=n*3
+    return word3
+
+# Exercise 3: BLACKJACK: Given three integers between 1 and 11, if their sum is less than or equal to 21, 
+# return their sum. If their sum exceeds 21 and there's an eleven, reduce the total sum by 10. 
+# Finally, if the sum (even after adjustment) exceeds 21, return 'BUST'
+
+def blackjack(num1,num2,num3):
+    # check the range of numbers
+    points = sum((num1,num2,num3))
+    if points <= 21:
+        return points
+    if points > 21 and 11 in (num1,num2,num3): #use tuples as we do not want to change the numbers
+        points -=10
+        # print("Points after reduction {}".format(points))
+    if points > 21:
+        return "BUST"
+    else:
+        return points
 
 
+# Exercie 4: SUMMER OF '69: Return the sum of the numbers in the array, except ignore sections of numbers 
+# starting with a 6 and extending to the next 9 (every 6 will be followed by at least one 9). Return 0 for no numbers.
+
+print("Blackjack:")
+print(blackjack(5,6,7))
+print(blackjack(9,9,9))
+print(blackjack(9,9,11))
+
+print("Find 33:")
+print(Find_33([1,2,3,3,5]))
+
+print("Almost there:")
+print(almost_there(80))
+
+print("Paper Doll:")
+print(paper_doll("hello"))
+
+print("Master Yoda:")
+print(master_yoda("Hello World"))
 
 
-
-
-
+print("Old Mcdonalds:")
+print(OLD_MCDONALD("oldmcdonalds"))
+print(OLD_MCDONALD("old"))
 
 print(LesserOfTheTwo(3,5))
 print(LesserOfTheTwo(4,6))

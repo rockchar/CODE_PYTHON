@@ -42,6 +42,12 @@ def AddTwoNumbers(a,b):
     return a+b
 
 # A note about __name__ == "__main__": a special variable in python
+# Before executing code the python Interpretor reads source file and
+# defines a few special variables
+# If the python interpretor is running the file as the main file then
+# the variable __main__ is set to "__main__"
+# IF the file is imported from another module then the __main__ variable is set 
+# to the name of the module. 
 
 if __name__ == "__main__": 
     print("Executed when invoked directly")
