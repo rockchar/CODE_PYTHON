@@ -47,9 +47,6 @@ print(stringfloatprecision)
 stringfloatprecision = "This is an example of float precision with appended space and zeros %150.50f"%(3.1416)
 print(stringfloatprecision)
 
-
-
-
 # Formatting strings using the format method
 formatMethodString = "The {} {} {} jumps over the lazy dogs!".format("quick","brown","fox")
 print(formatMethodString)
