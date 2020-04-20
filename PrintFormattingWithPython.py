@@ -66,3 +66,6 @@ print(formatmethodvarindex)
 #Alignement padding and precision with .format() format method
 stringprecision = "This is an example of a float precision using format method float = {0:2.15f}".format(333.1416)
 print(stringprecision)
+
+#Alignment, padding and precision with .format()
+# using the curly braces we can specify the width, alignment and precision or rounding parameters
