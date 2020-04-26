@@ -5,9 +5,10 @@ changed inside a list.
 This file demonstrates the following list operations:
 1.) Creating lists
 2.) Indexing and Slicing Lists
-3.) Basic List Methods
-4.) Nesting Lists
-5.) Introduction to List Comprehensions
+3.) List operations
+4.) Basic List Methods
+5.) Nesting Lists
+6.) Introduction to List Comprehensions
 '''
 
 # CREATING A LIST :
@@ -88,7 +89,68 @@ print(my_slicable_list[-1])
 #Note that the list change is not permanenent and when we print the list, the list is printed in order 
 print(my_slicable_list)
 
+#3. LIST OPERATIONS
+#-------------------------------------------------------------------------------------------------------------------
+# we can do many opearations on lists 
 
+print("\nLIST OPERATIONS\n")
+# 1. Concatenation
+my_List_operations = ["1","2","3","4","5"]
+print(my_List_operations)
+
+# now lets concatenate the list just as we do on strings
+
+print(my_List_operations+["6","7"]) # this is not permanent and the original list remains the same
+
+# List duplication using * operator
+print(my_List_operations*2) # this is not permanent and the original list remains the same
+
+# List reassignment 
+my_List_operations = my_List_operations + ["apple","orange"] # this is permanent same as append
+print(my_List_operations)
+
+
+#4 BASIC LIST METHODS
+#--------------------------------------------------------------------------------------------------------------------
+# python list classes provide us many basic in built functions. Lets discuss some of the most common ones below
+
+print("\nBASIC LIST METHODS\n")
+my_demo_list = [1,2,3,4,"apple","mango",7,"Guava"]
+print(my_demo_list)
+print(len(my_demo_list))
+print(my_demo_list.pop())
+print(my_demo_list)
+print(len(my_demo_list))
+
+print(list(reversed(my_demo_list)))
+print(my_demo_list)
+print(my_demo_list.reverse()) # permanent and retrns None
+print(my_demo_list)
+
+#5 NESTING LISTS
+#------------------------------------------------------------------------------------------------------------------------
+# A great feature of python is that it allows us to nest objects together i.e object within an object, Lists are no exceptions
+print("\nNESTING LISTS\n")
+
+
+list1 = [1,2,3]
+list2 = [3,4,5]
+list3 = [6,7,8]
+
+my_nested_list = [list1,list2,list3] # this represents a matrix 3x3
+
+print(my_nested_list)
+
+# now lets grab the first item of the matrix 
+print(my_nested_list[0])
+
+# now lets grab the first item of the first item of the matrix
+print(my_nested_list[0][0])
+
+# we can use all the above mentioned features on this matrix too
+
+#6 LIST COMPREHENSION
+#--------------------------------------------------------------------------------------------------------------------------
 
 
 
