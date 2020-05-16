@@ -45,3 +45,22 @@ print(my_dict_list.values())
 print(my_dict.values())
 my_dict["key4"]="value4"
 print(my_dict.values())
+
+# the values themselves can be manipulated
+
+my_dict["key5"] = 125
+print(my_dict["key5"])
+
+my_dict["key5"]-= 121
+print(my_dict["key5"])
+
+# dictionaries can be nested 
+my_nested_dictionary = {"key1":{"key2":{"key3":["Nested_value1","Nested_Value2","Nested_Value3"]}}}
+print(my_nested_dictionary["key1"])
+print(my_nested_dictionary["key1"]["key2"])
+print(my_nested_dictionary["key1"]["key2"]["key3"])
+print(my_nested_dictionary["key1"]["key2"]["key3"][2])
+
+# let us print the keys and values 
+print(my_nested_dictionary.keys())
+print(my_nested_dictionary.values())
