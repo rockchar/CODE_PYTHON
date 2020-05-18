@@ -63,3 +63,35 @@ for item1,item2 in list(zip(list1,list2)):
     print(f"item {item1} in list2 is {item2}")
 
 # this will come in handy in many cases 
+
+
+# 4. in operator
+# We have already seen in operator in for loops but in operator can be used 
+# to check whether an element is in a loop or not. Returns a boolean
+
+print("one" in ["one","two","three"])
+print("four" in ["one","two","three"])
+print("four" in ["one","two","three","four"])
+
+# 5. Random 
+# Python provides a random library that has many inbuilt methods
+# we will discuss shuffle and randint here 
+
+list_random = [1,2,3,4,5,6]
+from random import shuffle
+print(list_random)
+shuffle(list_random)
+print("After Shuffle:")
+print(list_random)
+
+from random import randint
+# the following prints a random integer between 0 and 100
+print(randint(0,100))
+
+# 6. Min and Max 
+# Min and max print the minimum and max value of an interable
+# For examples
+
+my_tuple = (1,2,3,4,5,6,7,10,9)
+print(f"Maximum value in the tuple is {max(my_tuple)}")
+print(f"Minimum value in the tuple is {min(my_tuple)}")
