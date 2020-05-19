@@ -102,3 +102,6 @@ print(f"Minimum value in the tuple is {min(my_tuple)}")
 
 my_input = input("Type anything :")
 print(f"the type of input is {type(my_input)} and value is {my_input}")
+
+# in the above example we can see that the type enetred in in input is always 
+# string . We need to convert it into appropriate type for our  use  
