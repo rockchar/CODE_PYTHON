@@ -95,3 +95,10 @@ print(randint(0,100))
 my_tuple = (1,2,3,4,5,6,7,10,9)
 print(f"Maximum value in the tuple is {max(my_tuple)}")
 print(f"Minimum value in the tuple is {min(my_tuple)}")
+
+
+# 7. Input
+# The input command takes the input from the shell
+
+my_input = input("Type anything :")
+print(f"the type of input is {type(my_input)} and value is {my_input}")
