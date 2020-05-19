@@ -34,5 +34,8 @@ my_farenheit_list = [((9/5)*temp+32) for temp in my_celsius_list ]
 print(my_farenheit_list) 
 
 # we can also perform nested list comprehension
-my_nested_list = [ x*x for x in [x*x for x in range(11)]]
+my_nested_list = [ x*x for x in [ x*x for x in range(11) ] ]
 print(my_nested_list)
+
+a = "rohit"
+print(len(a))
