@@ -18,5 +18,21 @@ print(my_list)
 # notation X^2 : X in {0,1,2,3,4,5,6,7,8,9,10}
 #
 
-my_sq_list = [x*x for x in range(0,11,1)]
+my_sq_list = [x*x for x in range(11)]
 print(my_sq_list)
+
+# We can also add if statements within the list
+
+my_evennum_list = [ x for x in range(11) if x%2 == 0 ]
+print(my_evennum_list)
+
+# we can do more complicated mathematics too
+# for example celcius to farenheit 
+
+my_celsius_list = [ 0, 32, 64, 127 ]
+my_farenheit_list = [((9/5)*temp+32) for temp in my_celsius_list ]
+print(my_farenheit_list) 
+
+# we can also perform nested list comprehension
+my_nested_list = [ x*x for x in [x*x for x in range(11)]]
+print(my_nested_list)
