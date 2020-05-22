@@ -43,5 +43,6 @@ def check_even(num):
 
 
 my_filter_List=[1,2,3,4,5,6,7,8,9,10]
-
 print(list(filter(check_even,my_filter_List)))
+
+# 3. LAmbda Expressions
